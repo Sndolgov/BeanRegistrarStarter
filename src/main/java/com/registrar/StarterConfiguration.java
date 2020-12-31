@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Import;
 
 @Configuration
 @Import(BeanDefinitionRegistrar.class)
-@EnableConfigurationProperties({PackageProperties.class})
+@EnableConfigurationProperties({ScanProperties.class})
 public class StarterConfiguration
 {
 }

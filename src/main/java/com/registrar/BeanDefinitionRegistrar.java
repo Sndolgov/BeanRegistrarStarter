@@ -15,11 +15,12 @@ import java.util.Set;
 public class BeanDefinitionRegistrar implements ImportBeanDefinitionRegistrar, EnvironmentAware
 {
     private Environment environment;
+    private ScanProperties scanProperties = new ScanProperties();
 
     @Override
     public void registerBeanDefinitions(AnnotationMetadata importingClassMetadata, BeanDefinitionRegistry registry)
     {
-        String packageName = environment.getProperty("package.path");
+        String packageName = environment.getProperty("scan.path");
         Reflections scanner = new Reflections(packageName);
         Set<Class<?>> classes = scanner.getTypesAnnotatedWith(Singleton.class, true);
         for (Class<?> classType : classes)

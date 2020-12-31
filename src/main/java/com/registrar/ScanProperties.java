@@ -4,8 +4,8 @@ import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 @Data
-@ConfigurationProperties(prefix = "package")
-public class PackageProperties
+@ConfigurationProperties(prefix = "scan")
+public class ScanProperties
 {
     private String path;
 }
