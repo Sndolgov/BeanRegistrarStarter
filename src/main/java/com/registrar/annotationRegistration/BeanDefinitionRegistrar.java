@@ -1,4 +1,4 @@
-package com.registrar;
+package com.registrar.annotationRegistration;
 
 import org.reflections.Reflections;
 import org.springframework.beans.factory.config.BeanDefinition;
@@ -15,7 +15,6 @@ import java.util.Set;
 public class BeanDefinitionRegistrar implements ImportBeanDefinitionRegistrar, EnvironmentAware
 {
     private Environment environment;
-    private ScanProperties scanProperties = new ScanProperties();
 
     @Override
     public void registerBeanDefinitions(AnnotationMetadata importingClassMetadata, BeanDefinitionRegistry registry)

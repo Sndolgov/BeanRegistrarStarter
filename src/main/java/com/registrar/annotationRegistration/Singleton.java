@@ -1,4 +1,4 @@
-package com.registrar;
+package com.registrar.annotationRegistration;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
